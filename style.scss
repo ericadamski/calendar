@@ -1,0 +1,88 @@
+@import 'bourbon/_bourbon.scss';
+
+$border-color: black;
+
+$width: 80vw;
+$height: 80vh;
+
+$cell-padding: 1vh;
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+
+#calendar {
+  padding: 10vh 10vw 0 10vw;
+  table {
+    width: $width;
+    height: $height;
+
+    thead {
+      border: 1px solid $border-color;
+
+      th {
+        text-align: center;
+        border-style: none;
+      }
+
+      tr {
+        height: 10vh;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    tbody {
+      th {
+        // Days of week
+        text-align: center;
+
+        background-color: rgba(#454141, 0.1);
+
+        border: 1px solid $border-color;
+      }
+
+      td {
+        padding: $cell-padding;
+
+        border: 1px solid $border-color;
+
+        transition-duration: 0.3s;
+        transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+
+        &.today {
+          @include linear-gradient(#f5f5f5, #e8e8e8);
+        }
+
+        &:hover {
+          transform: scale(1.4);
+          border-radius: 10px;
+
+          @include linear-gradient(#e4dede, #d1cbcb);
+        }
+      }
+
+      .date {
+        width: 100%;
+        height: 20%;
+        top: 0;
+      }
+
+      .content {
+        height: 80%;
+      }
+
+      .off {
+        color: rgba(80, 80, 80, 0.64);
+      }
+    }
+  }
+}
