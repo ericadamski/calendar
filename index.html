@@ -13,7 +13,7 @@
 </head>
 <body>
   <script type="text/javascript" src="index.js"></script>
-  <div id="calendar">
+  <div id="calendar" class="modal">
     <table>
       <thead>
         <tr>
@@ -35,8 +35,8 @@
           <th><div>Sat</div></th>
         </tr>
         <tr>
-          <td id="table-00" >
-            <div class="date off">26</div>
+          <td id="table-00">
+            <div class="date modal-trigger off">26</div>
             <div class="content"></div>
           </td>
           <td id="table-01" >
@@ -216,5 +216,15 @@
         </tr>
       </tbody>
     </table>
+
+    <input class="modal-state" id="modal-00" type="checkbox"/>
+    <div class="modal-fade-screen">
+      <div class="modal-inner">
+        <div class="modal-close" for="modal-00"></div>
+        <h1>Modal Title</h1>
+        <p class="modal-intro">Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.</p>
+        <p class="modal-content">Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam. Body text lorem ipsum dolor ipsum dolor sit sit possimus amet.</p>
+      </div>
+    </div>
   </div>
 </body>

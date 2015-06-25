@@ -111,3 +111,23 @@ $(document).ready ->
 
   $(".arrow-left").click cal.arrowHandler('left')
   $(".arrow-right").click cal.arrowHandler('right')
+
+  $('.date').click ->
+    $('.modal-state').prop({ checked: true }).change()
+    console.log $('.modal-state').is ':checked'
+    return
+
+  $('#modal-00').on 'change', ->
+    if $(this).is(':checked')
+      $('body').addClass 'modal-open'
+    else
+      $('body').removeClass 'modal-open'
+    return
+
+  $('.modal-fade-screen, .modal-close').on 'click', ->
+    $('.modal-state:checked').prop('checked', false).change()
+    return
+
+  $('.modal-inner').on 'click', (e) ->
+    e.stopPropagation()
+    return
