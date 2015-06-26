@@ -58,7 +58,7 @@ class Calendar
     while row < 6 and day <= last.getDate()
       cell = $("\##{@getCalendarAccessor(row, col)}").find("div.date")
 
-      cell.removeClass('off').html day
+      cell.removeClass('off').html day + "<span class=\"glyphicon glyphicon-asterisk\"></span>"
 
       if day is @today and month is @this_month and year is @this_year
         cell.parent().addClass 'today'
@@ -105,6 +105,10 @@ class Calendar
 
         that.populateCalendar that.current_month, that.current_year
 
+# TODO: Add change color
+# TODO: Add Event Mangement
+# TODO: Add Event overly Info
+
 
 $(document).ready ->
   cal = new Calendar
@@ -130,4 +134,15 @@ $(document).ready ->
 
   $('.modal-inner').on 'click', (e) ->
     e.stopPropagation()
+    return
+
+  $('.sliding-panel-button,.sliding-panel-fade-screen,.sliding-panel-close').on 'click touchstart', (e) ->
+    $('.sliding-panel-content,.sliding-panel-fade-screen').toggleClass 'is-visible'
+    e.preventDefault()
+    return
+
+  $('.js-accordion-trigger').bind 'click', (e) ->
+    jQuery(this).parent().find('.submenu').slideToggle 'fast'
+    jQuery(this).parent().toggleClass 'is-expanded'
+    e.preventDefault()
     return

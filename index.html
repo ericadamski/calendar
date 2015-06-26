@@ -18,7 +18,7 @@
       <thead>
         <tr>
           <th class="arrow-left"><button>◀</button></th>
-          <th id="month-year" colspan="5">
+          <th id="month-year" colspan="5" class="sliding-panel-button">
             October 2015
           </th>
           <th class="arrow-right"><button>▶</button></th>
@@ -221,10 +221,72 @@
     <div class="modal-fade-screen">
       <div class="modal-inner">
         <div class="modal-close" for="modal-00"></div>
-        <h1>Modal Title</h1>
-        <p class="modal-intro">Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.</p>
-        <p class="modal-content">Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam. Body text lorem ipsum dolor ipsum dolor sit sit possimus amet.</p>
+        <h1 id="modal-title">Modal Title</h1>
+        <p id="modal-intro" class="modal-intro">Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.</p>
+        <p id="modal-content" class="modal-content">Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam. Body text lorem ipsum dolor ipsum dolor sit sit possimus amet.</p>
       </div>
     </div>
   </div>
+  <nav class="js-menu sliding-panel-content">
+    <ul class="accordion">
+      <li>
+        <a href="javascript:void(0)" class="js-accordion-trigger">
+          <span class="glyphicon glyphicon-calendar sliding-panel-icon"></span>
+          Calendar
+        </a>
+        <ul class="submenu">
+          <li>
+            <a href="javascript:void(0)">
+            <span class="glyphicon glyphicon-plus sliding-panel-icon"></span>
+            Add Event
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">Sub Item 2</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="js-accordion-trigger">
+          <span class="glyphicon glyphicon-search sliding-panel-icon"></span>
+          Go To Date
+        </a>
+        <ul class="submenu">
+          <li>
+            <a href="javascript:void(0)">
+              <span
+                class="glyphicon glyphicon-repeat sliding-panel-icon"></span>
+              Recents
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <span
+                class="glyphicon glyphicon-pencil sliding-panel-icon"></span>
+              New Search
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="js-accordion-trigger">
+          <span class="glyphicon glyphicon-cog sliding-panel-icon"></span>
+          Settings
+        </a>
+        <ul class="submenu">
+          <li>
+            <a href="javascript:void(0)">
+              <span class="glyphicon glyphicon-tint sliding-panel-icon"></span>
+              Change Color
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">Sub Item 2</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="js-menu-screen sliding-panel-fade-screen"></div>
 </body>
